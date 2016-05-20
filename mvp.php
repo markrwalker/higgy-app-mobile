@@ -1,5 +1,6 @@
 <?php
 	require_once('config.php');
+	global $mvp_voting;
 
 	$year = array();
 	$sql1 = "SELECT * FROM `year` WHERE `current` = 1";
@@ -10,7 +11,7 @@
 
 	require_once('includes/header.php');
 
-	if (MVP_VOTING) {
+	if ($mvp_voting) {
 		if (isset($_POST['submit_votes']) && !empty($_POST['select-female']) && !empty($_POST['select-male'])) {
 			$ip_addr = $_SERVER['REMOTE_ADDR'];
 			if (!empty($_POST['select-female'])) {

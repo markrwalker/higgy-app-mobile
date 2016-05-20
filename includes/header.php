@@ -47,6 +47,5 @@
 				<li><a href="map.php" data-ajax="false">Map</a></li>
 				<li><a href="mvp.php" data-ajax="false">MVP Voting</a></li>
 				<li><a href="camera.php" data-ajax="false">Upload Photos</a></li>
-				<li><a href="logout.php" data-ajax="false">Logout</a></li>
 			</ul>
 		</div><!-- /panel -->

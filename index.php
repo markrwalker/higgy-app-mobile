@@ -28,6 +28,6 @@
 				<li><a href="mvp.php" data-ajax="false">MVP Voting</a> allows you to vote for the H13 Male and Female MVPs. Anyone can vote (once!)</li>
 				<li><a href="camera.php" data-ajax="false">Photo Uploads</a> allows you to take a photo with your phone and upload it to the server. Keep it clean!</li>
 			</ul>
-			<p>Guest Users cannot login, but can keep track of teams and standings on the <a href="scoreboard.php" data-ajax="false">Scoreboard</a> page, as well as vote for <a href="mvp.php" data-ajax="false">MVPs</a> and <a href="camera.php" data-ajax="false">upload photos</a>.</p>
+			<p>Non-players can keep track of teams and standings on the <a href="scoreboard.php" data-ajax="false">Scoreboard</a> page, as well as vote for <a href="mvp.php" data-ajax="false">MVPs</a> and <a href="camera.php" data-ajax="false">upload photos</a>.</p>
 		</div><!-- /content -->
 <?php require_once('includes/footer.php'); ?>

@@ -18,7 +18,7 @@
 		<?php if ($password && $my_data['checked_in'] == '0') { ?>
 			<strong>Make sure you check in with the Deck Manager to begin play!</strong>
 		<?php } ?>
-			<p>Use the menu icon at the top left to move around the app.</p>
+			<p>Use the menu icon at the top right to move around the app.</p>
 			<ul>
 				<li><a href="myteam.php" data-ajax="false">My Team</a> will show you the teams you've played and the teams you need to play.</li>
 				<ul><li>Start a game by visiting the Deck Manager to get assigned a field. <strong>Important!</strong> After the game, one or both teams have to report the score to the deck manager so that they know the field is open.</li></ul>

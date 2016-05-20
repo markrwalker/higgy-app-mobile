@@ -1,11 +1,16 @@
 <?php
 	require_once('config.php');
 
+	$year = array();
+	$sql1 = "SELECT * FROM `year` WHERE `current` = 1";
+	$result1 = mysql_query($sql1);
+	$year = mysql_fetch_assoc($result1);
+
 	$empty_submit = false;
 
 	require_once('includes/header.php');
 
-	if (true) {
+	if (MVP_VOTING) {
 		if (isset($_POST['submit_votes']) && !empty($_POST['select-female']) && !empty($_POST['select-male'])) {
 			$ip_addr = $_SERVER['REMOTE_ADDR'];
 			if (!empty($_POST['select-female'])) {
@@ -29,7 +34,7 @@
 			if (isset($_POST['submit_votes'])) $empty_submit = true;
 			$males = array();
 			$females = array();
-			$sql1 = "SELECT `name`, `person1`, `person1_gender`, `person2`, `person2_gender` FROM `team` WHERE `year_id` = 3";
+			$sql1 = "SELECT `name`, `person1`, `person1_gender`, `person2`, `person2_gender` FROM `team` WHERE `year_id` = ".$year['id'];
 			$result1 = mysql_query($sql1);
 			while ($row = mysql_fetch_assoc($result1)) {
 				//echo '<pre>'.print_r($row,1).'</pre>';

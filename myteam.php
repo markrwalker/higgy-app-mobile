@@ -1,16 +1,22 @@
 <?php
 	require_once('config.php');
-	if (!isset($_COOKIE['higgy_password'])) {
-		header("Location: login.php?page=myteam");
+
+	if (!isset($_COOKIE['higgy_teamid']) || $_GET['reset']) {
+		if ($_GET['reset']) {
+			$fh = fopen(__DIR__.'/log.txt', 'a'); fputs($fh, date('Y-m-d H:i:s')." Logout by: ".$_COOKIE['higgy_teamname']."\n"); fclose($fh);
+			setcookie("higgy_teamid", null, -1, "/");
+			setcookie("higgy_teamname", null, -1, "/");
+		}
+		header("Location: select.php?page=myteam");
 		exit();
 	}
-	$password = $_COOKIE['higgy_password'];
-	$sql1 = "SELECT team.* FROM team INNER JOIN users ON team.id = users.team_id WHERE users.password = '$password' LIMIT 1";
+	$teamid = $_COOKIE['higgy_teamid'];
+	$sql1 = "SELECT team.* FROM team WHERE id = $teamid LIMIT 1";
 	$result1 = mysql_query($sql1);
 	$my_data = mysql_fetch_assoc($result1);
 
 	if (!$my_data) {
-		header("Location: login.php?page=myteam");
+		header("Location: select.php?page=myteam");
 		exit();
 	}
 	$my_id = $my_data['id'];
@@ -144,6 +150,7 @@
 				<li><?php echo $opponent_name; ?></li>
 			</ul>
 <?php } ?>
+		<p><a href="<?php echo $_SERVER['PHP_SELF'].'?reset=1'; ?>" data-ajax="false">Select a different team</a></p>
 		</div><!-- /content -->
 <?php require_once('includes/footer.php'); ?>
 <?php

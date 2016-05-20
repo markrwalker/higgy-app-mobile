@@ -7,12 +7,8 @@
 	$result = mysql_query($sql);
 	$team_data = mysql_fetch_assoc($result);
 
-	if (isset($_COOKIE['higgy_password'])) {
-		$password = $_COOKIE['higgy_password'];
-		$sql = "SELECT * FROM users where team_id = '".$team_data['id']."' LIMIT 1";
-		$result = mysql_query($sql);
-		$user_data = mysql_fetch_assoc($result);
-		if ($password == $user_data['password']) {
+	if (isset($_COOKIE['higgy_teamid'])) {
+		if ($team_id == $_COOKIE['higgy_teamid']) {
 			header("Location: myteam.php");
 			exit();
 		}

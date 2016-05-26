@@ -18,7 +18,7 @@
 					<ul data-role="listview" data-inset="true" data-divider-theme="d">
 <?php 
 		$teams = array();
-		$sql3 = "SELECT * FROM team WHERE year_id = ".$year['id'];//." AND checked_in = 1";
+		$sql3 = "SELECT * FROM team WHERE year_id = ".$year['id']." AND checked_in = 1 AND id != 999";
 		$result3 = mysql_query($sql3);
 		while ($row = mysql_fetch_assoc($result3)) {
 			$teams[] = $row;

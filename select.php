@@ -8,7 +8,7 @@
 	$year = mysql_fetch_assoc($result1);
 
 	$teams = array();
-	$sql3 = "SELECT * FROM team WHERE year_id = ".$year['id']." ORDER BY name ASC";
+	$sql3 = "SELECT * FROM team WHERE year_id = ".$year['id']." AND id != 999 ORDER BY name ASC";
 	$result3 = mysql_query($sql3);
 	while ($row = mysql_fetch_assoc($result3)) {
 		$teams[] = $row;

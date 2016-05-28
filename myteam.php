@@ -123,6 +123,7 @@
 		<div data-role="content">
 <?php if ($my_checked_in == '0') { ?>
 			<h2 class="error"><?php echo $my_name; ?>, please check in with the Deck Manager to begin play!</h2>
+			<p><a href="<?php echo $_SERVER['PHP_SELF'].'?reset=1'; ?>" data-ajax="false">Select a different team</a></p>
 <?php exit(); } ?>
 			<h3><?php echo $trophies.' '.$my_name.' ('.$my_wins.' - '.$my_losses.')'; ?></h3>
 			<h4><?php echo $my_person1.', '.$my_person2; ?></h4>

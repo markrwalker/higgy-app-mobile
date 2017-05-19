@@ -1,13 +1,13 @@
 <?php
 	require_once('config.php');
-	if (!isset($_COOKIE['higgy_password'])) {
-		header("Location: login.php?page=myteam");
+	if (!isset($_COOKIE['higgy_teamid'])) {
+		header("Location: select.php?page=myteam");
 		exit();
 	}
-	$password = $_COOKIE['higgy_password'];
-	$sql = "SELECT * FROM team INNER JOIN users on team.id = users.team_id WHERE users.password = '$password' LIMIT 1";
-	$result = mysql_query($sql);
-	$my_data = mysql_fetch_assoc($result);
+        $teamid = $_COOKIE['higgy_teamid'];
+        $sql1 = "SELECT team.* FROM team WHERE id = $teamid LIMIT 1";
+        $result1 = mysql_query($sql1);
+        $my_data = mysql_fetch_assoc($result1);
 	$my_name = $my_data['name'];
 
 	if (isset($_POST['submit_field'])) {

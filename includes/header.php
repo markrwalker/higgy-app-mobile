@@ -13,18 +13,18 @@
 	<script src="includes/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="includes/higgy.mobile.js"></script>
 	<script type="text/javascript" src="includes/slidernav.js"></script>
+<?php if ($_SERVER['HTTP_HOST'] == 'app.higgyball.com') { ?>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-15196276-3', 'auto');
+		ga('send', 'pageview');
 
-  ga('create', 'UA-15196276-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
+	</script>
+<?php } ?>
 </head>
 <body>
 	<div id="menu">

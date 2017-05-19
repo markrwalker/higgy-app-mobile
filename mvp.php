@@ -16,12 +16,12 @@
 			$ip_addr = $_SERVER['REMOTE_ADDR'];
 			if (!empty($_POST['select-female'])) {
 				$female = $_POST['select-female'];
-				mysql_query("INSERT INTO `vote` (`name`, `gender`, `ip`) VALUES ('$female', 'F', '$ip_addr')");
+				mysql_query("INSERT INTO `vote` (`name`, `gender`, `ip`, `year_id`) VALUES ('$female', 'F', '$ip_addr', 4)");
 				$fh = fopen('/home/mark/public_html/mobile/log.txt', 'a'); fputs($fh, date('Y-m-d H:i:s')." MVP vote: $female\n"); fclose($fh);
 			}
 			if (!empty($_POST['select-male'])) {
 				$male = $_POST['select-male'];
-				mysql_query("INSERT INTO `vote` (`name`, `gender`, `ip`) VALUES ('$male', 'M', '$ip_addr')");
+				mysql_query("INSERT INTO `vote` (`name`, `gender`, `ip`, `year_id`) VALUES ('$male', 'M', '$ip_addr', 4)");
 				$fh = fopen('/home/mark/public_html/mobile/log.txt', 'a'); fputs($fh, date('Y-m-d H:i:s')." MVP vote: $male\n"); fclose($fh);
 			}
 			setcookie("higgy_mvp_vote",1,time()+3600*24*30,"/");

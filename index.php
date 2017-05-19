@@ -14,7 +14,7 @@
 ?>
 <?php require_once('includes/header.php'); ?>
 		<div data-role="content">
-			<h3>Welcome to the H13 Scoresheet App!</h3>
+			<h3>Welcome to the H14 Scoresheet App!</h3>
 		<?php if ($password && $my_data['checked_in'] == '0') { ?>
 			<strong>Make sure you check in with the Deck Manager to begin play!</strong>
 		<?php } ?>
@@ -25,7 +25,7 @@
 				<li><a href="scoreboard.php" data-ajax="false">Scoreboard</a> will show you all of the teams in the tournament and their records.</li>
 				<li><a href="rules.php" data-ajax="false">Rules</a> gives you all of the rules of Higgyball.</li>
 				<li><a href="map.php" data-ajax="false">Map</a> shows you a handy map of the fields.</li>
-				<li><a href="mvp.php" data-ajax="false">MVP Voting</a> allows you to vote for the H13 Male and Female MVPs. Anyone can vote (once!)</li>
+				<li><a href="mvp.php" data-ajax="false">MVP Voting</a> allows you to vote for the H14 Male and Female MVPs. Anyone can vote (once!)</li>
 				<li><a href="camera.php" data-ajax="false">Photo Uploads</a> allows you to take a photo with your phone and upload it to the server. Keep it clean!</li>
 			</ul>
 			<p>Non-players can keep track of teams and standings on the <a href="scoreboard.php" data-ajax="false">Scoreboard</a> page, as well as vote for <a href="mvp.php" data-ajax="false">MVPs</a> and <a href="camera.php" data-ajax="false">upload photos</a>.</p>

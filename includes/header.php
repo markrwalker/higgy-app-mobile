@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Higgyball 2016 Scoresheet App</title>
+	<title>Higgyball 2017 Scoresheet App</title>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
 	<link rel="stylesheet" href="includes/higgy.mobile.css" />
-	<link rel="stylesheet" href="includes/higgyball2016.min.css" />
+	<link rel="stylesheet" href="includes/higgyball2017.min.css" />
 	<link rel="stylesheet" href="includes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="includes/jquery.mobile.structure-1.4.5.min.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,7 @@
 
 		<div data-role="header">
 			<a href="#" data-icon="arrow-l" data-iconpos="left" data-rel="back" data-theme="b">Back</a>
-			<h1>Higgyball 2016</h1>
+			<h1>Higgyball 2017</h1>
 			<a href="#menu" data-theme="b" data-icon="bars">Menu</a>
 		</div><!-- /header -->
 
